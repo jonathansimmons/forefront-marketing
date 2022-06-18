@@ -1,12 +1,3 @@
 [build]
-  command = "npm run jekyll:build"
+  command = "npm run jekyll:build; npm run css:build"
   publish = "_site/"
-
-[context.production.environment]
-  JEKYLL_ENV = "production"
-
-[context.branch-deploy.environment]
-  JEKYLL_ENV = "staging"
-
-[context.deploy-preview.environment]
-  JEKYLL_ENV = "staging"

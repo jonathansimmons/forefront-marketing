@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "jekyll:dev": "bundle exec jekyll serve --incremental --watch",
-    "jekyll:build": "JEKYLL_ENV=production bundle exec jekyll build",
+    "jekyll:build": "JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build",
     "css:dev": "postcss _sass/main.scss --output assets/css/style.css --watch",
-    "css:build": "NODE_ENV=production postcss _sass/main.scss --output assets/css/style.css"
+    "css:build": "JEKYLL_ENV=production NODE_ENV=production postcss _sass/main.scss --output assets/css/style.css"
   },
   "keywords": [],
   "author": "",
