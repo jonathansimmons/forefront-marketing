@@ -2642,6 +2642,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-top: 200px;
   }
 
+  .sm\:pt-\[170px\] {
+    padding-top: 170px;
+  }
+
   .sm\:underline {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
