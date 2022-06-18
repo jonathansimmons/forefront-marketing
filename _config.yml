@@ -1,15 +1,4 @@
-title: Tailwind Jekyll Starter Kit
-description: A starter kit for using Tailwind with Jekyll
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - gulpfile.babel.js
-  - LICENSE.md
-  - node_modules
-  - package.json
-  - package-lock.json
-  - README.md
-  - src
-  - tailwind.config.js
-  - netlify.toml
+url: "https://saltinsure.com"
+title: SALT Insure
+description: "A custom-branded digital insurance application for independent insurance agents. Start accepting digital insurance quotes for personal lines home and auto today."
+keywords: "SALT, SALT Insure, Digital Insurance Application, Independent Agent"

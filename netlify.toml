@@ -1,3 +1,173 @@
 [build]
-  command = "npm run build"
+  command = "npm run jekyll:build"
   publish = "_site/"
+
+[[redirects]]
+  from = "/sign-up"
+  to = "https://insuranceform.app/sign-up"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/iaoa"
+  to = "https://insuranceform.app/sign-up/iaoa?c=Z7Ph61Ih"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "/salt-shaker"
+  to = "https://insuranceform.app/sign-up/salt-shaker?c=2wrvQ9kZ"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "/stakwise"
+  to = "https://insuranceform.app/sign-up/stakwise?c=Z7Ph61Ih"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/elp"
+  to = "https://insuranceform.app/sign-up/elp?c=Z7Ph61Ih"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/25-off"
+  to = "https://insuranceform.app/sign-up/25-off?c=Z7Ph61Ih"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "/go-big-ny"
+  to = "https://insuranceform.app/sign-up/go-big-ny?c=Z7Ph61Ih"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cli"
+  to = "https://insuranceform.app/sign-up/cli?c=Z7Ph61Ih"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/iiah"
+  to = "https://insuranceform.app/sign-up/iiah?c=Z7Ph61Ih"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/power-women"
+  to = "https://insuranceform.app/sign-up/power-women?c=Z7Ph61Ih"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/better-agency"
+  to = "https://insuranceform.app/sign-up/better-agency?c=Z7Ph61Ih"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/catalyit"
+  to = "https://insuranceform.app/sign-up/catalyit?c=Z7Ph61Ih"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/iiat"
+  to = "https://insuranceform.app/sign-up/iiat?c=nSALqHRN"
+  status = 301
+  force = true
+
+
+[[redirects]]
+  from = "/heath"
+  to = "https://insuranceform.app/sign-up/heath?c=LZ0bbThF"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/horizon"
+  to = "https://insuranceform.app/sign-up/horizon?c=QLQdu7dE"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about-salt"
+  to = "https://saltinsure.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/features-pricing"
+  to = "https://saltinsure.com/#features"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact-us"
+  to = "https://saltinsure.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pin"
+  to = "https://insuranceform.app/sign-up/pin?c=Z7Ph61Ih"
+  status = 301
+  force = true
+
+
+[[redirects]]
+  from = "/2020/10/01/how-technology-can-help-retain-your-team.html"
+  to = "https://saltinsure.com/2021/10/01/how-technology-can-help-retain-your-team.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2020/09/15/3-essential-things-for-your-insurance-agency-website.html"
+  to = "https://saltinsure.com/2021/09/15/3-essential-things-for-your-insurance-agency-website.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2020/09/01/why-your-insurance-data-collection-method-is-losing-you-leads.html"
+  to = "https://saltinsure.com/2021/09/01/why-your-insurance-data-collection-method-is-losing-you-leads.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2020/08/15/5-things-customers-look-for-in-an-insurance-agency.html"
+  to = "https://saltinsure.com/2021/08/15/5-things-customers-look-for-in-an-insurance-agency.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2020/08/04/how-insurance-agents-can-innovate-without-losing-productivity.html"
+  to = "https://saltinsure.com/2021/08/04/how-insurance-agents-can-innovate-without-losing-productivity.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2020/07/15/make-your-insurance-agency-more-efficient-with-these-apps.html"
+  to = "https://saltinsure.com/2021/07/15/make-your-insurance-agency-more-efficient-with-these-apps.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2020/07/15/make-your-insurance-agency-more-effecient-with-these-apps.html"
+  to = "https://saltinsure.com/2021/07/15/make-your-insurance-agency-more-efficient-with-these-apps.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2020/06/15/how-tech-improves-the-insurance-experience-for-customers-and-agents-alike.html"
+  to = "https://saltinsure.com/2021/06/15/how-tech-improves-the-insurance-experience-for-customers-and-agents-alike.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2020/06/01/five-ways-independent-agents-can-keep-up-with-industry-trends.html"
+  to = "https://saltinsure.com/2021/06/01/five-ways-independent-agents-can-keep-up-with-industry-trends.html"
+  status = 301
+  force = true

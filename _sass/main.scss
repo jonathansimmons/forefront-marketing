@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  .font-degular {
+    font-family: degular, sans-serif;
+    font-style: normal;
+  }
+
+  .font-degular-display {
+    font-family: degular-display, sans-serif;
+    font-style: normal;
+  }
+
+  .font-bookmania {
+    font-family: bookmania, serif;
+    font-style: normal;
+  }
+
+  .font-bookmania-black {
+    font-family: bookmania, serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .brand-h1 {
+    @apply font-bold;
+  }
+
+  .brand-h2 {
+    @apply font-bookmania font-bold;
+  }
+
+  .brand-h3 {
+    @apply font-degular-display font-semibold;
+  }
+
+  .brand-blockquote {
+    @apply font-degular italic;
+  }
+
+  .brand-pullquot {
+    @apply font-bookmania-black;
+  }
+
+}
+
+#mobile-nav {
+  @apply fixed top-0 bottom-0 -right-full w-72 xs:w-96  z-50 transition-all shadow-lg;
+}
+
+#mobile-nav.open {
+  @apply right-0;
+}
+
+#nav-overlay {
+  @apply fixed top-0 bottom-0 left-0 right-0 opacity-100 z-40;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px) grayscale(0.5);
+}

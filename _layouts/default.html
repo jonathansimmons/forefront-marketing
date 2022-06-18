@@ -1,12 +1,22 @@
 ---
+layout: default
 ---
 
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
 
-<main
-  class="bg-indigo-500 flex h-screen items-center justify-center w-full"
->
-  {{ content }}
-</main>
+  <body class="leading-normal tracking-normal bg-brand-creme font-degular overflow-x-hidden flex flex-col min-h-full" data-controller="nav">
 
-{% include footer.html %}
+    {% include header.html %}
+
+    <div class="flex-grow pt-[100px] sm:pt-[200px]">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+    {% if jekyll.environment == "production" %}
+      {% include scripts.html %}
+    {% endif %}
+  </body>
+</html>

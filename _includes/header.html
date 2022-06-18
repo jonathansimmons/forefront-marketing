@@ -1,12 +1,59 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Tailwind Jekyll Starter Kit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
-  </head>
+<nav id="header" class="fixed z-30 top-0 left-0 right-0 bg-brand-creme bg-opacity-80">
+  <div class="container mx-auto flex flex-wrap items-center justify-between mt-0 py-4 md:py-2">
+    <div class="pl-4 flex items-center">
+      <a class="text-white no-underline hover:no-underline font-bold text-2xl md:text-4xl" href="/">
+        <img src="/assets/images/full-logo.svg" alt="forefront" class="h-8">
+      </a>
+    </div>
+    <div class="block md:hidden pr-4">
+      <button id="nav-toggle" data-action="click->nav#open"
+        class="flex items-center p-1 text-brand-too-blue hover:text-brand-too-blue-dark focus:outline-none focus:shadow-outline transform duration-100 hover:scale-105 duration-300 ease-in-out">
+        <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="w-full flex-grow md:flex md:items-center md:w-auto hidden mt-2 md:mt-0 md:bg-transparent text-black p-4 md:p-0 z-20"
+      id="nav-content">
+      <ul class="list-reset md:flex justify-end flex-1 items-center">
+        <li class="mr-3">
+          <a class="inline-block border-b-2 border-transparent no-underline hover:border-brand-too-blue-dark text-brand-too-blue hover:text-brand-too-blue-dark py-2 px-4 text-lg uppercase tracking-widest hover:font-medium"
+            href="/about">About</a>
+        </li>
+        <li class="mr-3">
+          <a class="inline-block border-b-2 border-transparent no-underline hover:border-brand-too-blue-dark text-brand-too-blue hover:text-brand-too-blue-dark py-2 px-4 text-lg uppercase tracking-widest hover:font-medium"
+            href="/services">Services</a>
+        </li>
+        <li class="mr-3">
+          <a class="inline-block border-b-2 border-transparent no-underline hover:border-brand-too-blue-dark text-brand-too-blue hover:text-brand-too-blue-dark py-2 px-4 text-lg uppercase tracking-widest hover:font-medium"
+            href="/work">Work</a>
+        </li>
+        <li class="mr-3">
+          <a class="inline-block border-b-2 border-transparent no-underline hover:border-brand-too-blue-dark text-brand-too-blue hover:text-brand-too-blue-dark py-2 px-4 text-lg uppercase tracking-widest hover:font-medium"
+            href="mailto:andrew@fourfront.com?subject=Saying Hello">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <body>
-</html>
+<nav id="mobile-nav" class="h-screen">
+  <div class="text-right bg-brand-creme">
+    <button class="nav-close my-4 mr-4" data-action="click->nav#close">
+      <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+        <path
+          d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" />
+      </svg>
+    </button>
+  </div>
+  <div class="flex flex-col bg-white h-full">
+    <a class="inline-block no-underline hover:underline text-lg text-gray-800 hover:text-teal-800 py-4 px-6 mx-2 border-b border-gray-300"
+      href="/about" data-action="click->nav#close">About</a>
+    <a class="inline-block no-underline hover:underline text-lg text-gray-800 hover:text-teal-800 py-4 px-6 mx-2 border-b border-gray-300"
+      href="/service" data-action="click->nav#close">Services</a>
+    <a class="inline-block no-underline hover:underline text-lg text-gray-800 hover:text-teal-800 py-4 px-6 mx-2 border-b border-gray-300"
+      href="/work">Work</a>
+  </div>
+</nav>
