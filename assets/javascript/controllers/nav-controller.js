@@ -40,7 +40,7 @@ export default class extends Controller {
   }
 
   setupHeader(){
-    if (window.scrollY > 10) {
+    if (window.innerWidth <= 480 || window.scrollY > 10) {
       this.headerTarget.classList.remove("h-40")
       this.headerTarget.classList.add("h-16")
     } else {

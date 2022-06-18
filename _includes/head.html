@@ -14,7 +14,7 @@
   <meta content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" property="og:title">
   <meta content="{{ site.url }}{{ page.url }}" property="og:url">
   <meta property="og:image"
-    content="{%if page.image %}{{ site.url }}{{ page.image }}{% else %}{{ site.url }}{{ site.image }}{% endif %}" />
+    content="{%if page.image %}{{ page.image }}{% else %}{{ site.url }}{{ site.image }}{% endif %}" />
   <meta content="Salt Insure" property="og:site_name">
   <meta content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
     property="og:description">

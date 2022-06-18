@@ -5,8 +5,8 @@ title: "FourFront — About"
 
 <div class="pt-[100px] sm:pt-[160px]">
   <section class="bg-brand-too-blue mb-8">
-    <div class="container mx-auto flex flex-col justify-center py-28 gap-y-8 max-w-5xl px-12 sm:px-0 text-white">
-      <h2 class="font-bold text-7xl">About us</h2>
+    <div class="container mx-auto flex flex-col justify-center py-16 md:py-28 gap-y-8 max-w-5xl px-8 sm:px-0 text-white">
+      <h2 class="font-bold text-5xl md:text-7xl">About us</h2>
       <p class="text-3xl">We exist because there is no substitute for a well-developed creative solution.</p>
       <p class="text-3xl">Our work of telling stories in relatable, unique ways takes a lot of different forms, but everything is done to the same standard: with honesty, innovation, quality, and measurability. We approach each project saying “there is no box,” because if we only worked “out of the box,” the innovative solution that’s best might be incomplete.</p>
 
@@ -35,8 +35,8 @@ title: "FourFront — About"
       </div>
     </div>
 
-    <div class="container mx-auto flex flex-col justify-center py-28 gap-y-16 max-w-5xl px-12 sm:px-0 text-white">
-      <h2 class="font-bold text-7xl">Our Daily Goals</h2>
+    <div class="container mx-auto flex flex-col justify-center py-28 gap-y-16 max-w-5xl px-8 sm:px-0 text-white">
+      <h2 class="font-bold text-5xl md:text-7xl">Our Daily Goals</h2>
       <div class="grid md:grid-cols-2  gap-16 md:gap-28">
         <div class="flex flex-col">
           <p class="text-6xl text-brand-golden">1</p>
@@ -63,12 +63,12 @@ title: "FourFront — About"
     </div>
   </section>
 
-  <section class="container mx-auto flex flex-col justify-center gap-y-8 max-w-5xl px-12 sm:px-0 mt-28">
-    <h2 class="text-5xl text-brand-golden text-center font-medium">We exist because there is no substitute for a well-developed creative solution.</h2>
+  <section class="container mx-auto flex flex-col justify-center gap-y-8 max-w-5xl px-8 sm:px-0 mt-28">
+    <h2 class="text-3xl md:text-5xl text-brand-golden text-center font-medium">We exist because there is no substitute for a well-developed creative solution.</h2>
   </section>
 
-  <section class="container mx-auto flex flex-col justify-center gap-y-8 max-w-5xl px-12 sm:px-0 mt-28 mb-28">
-    <h2 class="font-bold text-7xl text-brand-too-blue">The Four Elements<br> Of Creativity</h2>
+  <section class="container mx-auto flex flex-col justify-center gap-y-8 max-w-5xl px-8 sm:px-0 mt-28 mb-28">
+    <h2 class="font-bold  text-5xl md:text-7xl text-brand-too-blue">The Four Elements<br> Of Creativity</h2>
   </section>
 
   <div x-data="{
@@ -86,7 +86,7 @@ title: "FourFront — About"
           whichChild(el, parent) {
               return Array.from(parent.children).indexOf(el) + 1
           }
-      }" x-id="['tab']" class="container mx-auto max-w-5xl grid grid-cols-5 gap-x-8">
+      }" x-id="['tab']" class="container mx-auto max-w-5xl sm:grid grid-cols-5 gap-x-8 hidden">
 
     <ul x-ref="tablist" @keydown.right.prevent.stop="$focus.wrap().next()" @keydown.home.prevent.stop="$focus.first()"
       @keydown.page-up.prevent.stop="$focus.first()" @keydown.left.prevent.stop="$focus.wrap().prev()"
@@ -156,8 +156,112 @@ title: "FourFront — About"
     </div>
   </div>
 
-  <section class="container mx-auto flex flex-col justify-center gap-y-8 max-w-5xl px-12 sm:px-0 mt-28 mb-28">
-      <a href="/manifesto" class="text-7xl text-brand-golden text-center font-medium">Welcome To <br> Fourfront</a>
+  <div x-data="{ active: 1 }" class="max-w-3xl mx-auto space-y-4 sm:hidden px-8">
+    <div x-data="{
+          id: 1,
+          get expanded() {
+              return this.active === this.id
+          },
+          set expanded(value) {
+              this.active = value ? this.id : null
+          },
+      }" role="region" class="bg-white rounded-md">
+      <h2>
+        <button x-on:click="expanded = !expanded"
+                :aria-expanded="expanded"
+                class="flex items-center justify-between w-full font-bold text-xl text-white tracking-widest px-6 py-4 bg-brand-golden"
+                :class="expanded ? 'rounded-t-md' : 'rounded-md'" >
+          <span>Honesty</span>
+          <span x-show="expanded" aria-hidden="true" class="ml-4 text-white">&minus;</span>
+          <span x-show="!expanded" aria-hidden="true" class="ml-4 text-white">&plus;</span>
+        </button>
+      </h2>
+
+      <div x-show="expanded" x-collapse>
+        <div class="pb-4 px-6 text-brand-golden mt-4 text-xl">If A deliverable doesn't look and sound like you, then it won't have the correct impact. A tailor doesn't let you walk out the door in clothes that don't help you look your absolute best; everything has to fit. By getting to know you and your organization, we begin to learn more about your identity, and ensure our work reflects who you are.</div>
+      </div>
+    </div>
+    <div x-data="{
+          id: 2,
+          get expanded() {
+              return this.active === this.id
+          },
+          set expanded(value) {
+              this.active = value ? this.id : null
+          },
+      }" role="region" class="bg-white rounded-md">
+      <h2>
+        <button x-on:click="expanded = !expanded"
+                :aria-expanded="expanded"
+                class="flex items-center justify-between w-full font-bold text-xl text-white tracking-widest px-6 py-4 bg-brand-periwinkle"
+                :class="expanded ? 'rounded-t-md' : 'rounded-md'" >
+          <span>Innovation</span>
+          <span x-show="expanded" aria-hidden="true" class="ml-4 text-white">&minus;</span>
+          <span x-show="!expanded" aria-hidden="true" class="ml-4 text-white">&plus;</span>
+        </button>
+      </h2>
+
+      <div x-show="expanded" x-collapse>
+        <div class="pb-4 px-6 text-brand-periwinkle mt-4 text-xl">People crave the new, and they can't help but appreciate a fresh take on something familiar. we are constantly seeking
+        out the most recent tools and practices to learn, but more importantly we approach ever project with the idea: "there is
+        not box." We Apprach each project from a starting place of boundless potential, and work from there.</div>
+      </div>
+    </div>
+    <div x-data="{
+          id: 3,
+          get expanded() {
+              return this.active === this.id
+          },
+          set expanded(value) {
+              this.active = value ? this.id : null
+          },
+      }" role="region" class="bg-white rounded-md">
+      <h2>
+        <button x-on:click="expanded = !expanded"
+                :aria-expanded="expanded"
+                class="flex items-center justify-between w-full font-bold text-xl text-white tracking-widest px-6 py-4 bg-brand-coral"
+                :class="expanded ? 'rounded-t-md' : 'rounded-md'" >
+          <span>Quailty</span>
+          <span x-show="expanded" aria-hidden="true" class="ml-4 text-white">&minus;</span>
+          <span x-show="!expanded" aria-hidden="true" class="ml-4 text-white">&plus;</span>
+        </button>
+      </h2>
+
+      <div x-show="expanded" x-collapse>
+        <div class="pb-4 px-6 text-brand-coral mt-4 text-xl">Creativity is a sequence of decisions, with each choic a single note in a symphony. By Pursuing excellence in service of strategic vision, those choices create a seamless whole for the audience. We constantly hone our craft as artisans and expert to ensure that each decision we make is the best in service of the whole.</div>
+      </div>
+    </div>
+    <div x-data="{
+          id: 4,
+          get expanded() {
+              return this.active === this.id
+          },
+          set expanded(value) {
+              this.active = value ? this.id : null
+          },
+      }" role="region" class="bg-white rounded-md">
+      <h2>
+        <button x-on:click="expanded = !expanded"
+                :aria-expanded="expanded"
+                class="flex items-center justify-between w-full font-bold text-xl text-white tracking-widest px-6 py-4 bg-brand-turquoise"
+                :class="expanded ? 'rounded-t-md' : 'rounded-md'" >
+          <span>Measurability</span>
+          <span x-show="expanded" aria-hidden="true" class="ml-4 text-white">&minus;</span>
+          <span x-show="!expanded" aria-hidden="true" class="ml-4 text-white">&plus;</span>
+        </button>
+      </h2>
+
+      <div x-show="expanded" x-collapse>
+        <div class="pb-4 px-6 text-brand-turquoise mt-4 text-xl">Art for art's sake is a beautiful thing, but fourfront doesn't exist to seek patrons. Creative production risks being
+        wasted unless it is directed, targeted and built with measurable goals as part of the product from the first step. Those goals may be specific or they may be ephemeral, but they must be established.</div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <section class="container mx-auto flex flex-col justify-center gap-y-8 max-w-5xl px-8 sm:px-0 mt-28 mb-28">
+      <a href="/manifesto" class="text-5xl md:text-7xl text-brand-golden text-center font-medium">Welcome To <br> Fourfront</a>
    </section>
 </div>
 
@@ -170,7 +274,7 @@ title: "FourFront — About"
   </div>
 </div>
 
-  <section class="container mx-auto flex flex-col justify-center gap-y-8 max-w-5xl px-12 sm:px-0 mt-28">
+  <section class="container mx-auto flex flex-col justify-center gap-y-8 max-w-5xl px-8 sm:px-0 mt-28">
     <h2 class="text-3xl text-brand-too-blue text-center">Interested in working with Fourfront? We’d love to hear from you.</h2>
     <a href="mailto:andrew@fourfront.com?subject=Let's Connect" class="text-brand-too-blue font-medium text-center text-4xl">Let's Connect</a>
   </section>

@@ -48,7 +48,7 @@
 }
 
 #mobile-nav {
-  @apply fixed top-0 bottom-0 -right-full w-72 xs:w-96  z-50 transition-all shadow-lg;
+  @apply fixed top-0 bottom-0 -right-full w-full xs:w-96 z-50 transition-all shadow-lg;
 }
 
 #mobile-nav.open {

@@ -6,13 +6,60 @@
       </a>
     </div>
     <div class="block md:hidden pr-4">
-      <button id="nav-toggle" data-action="click->nav#open"
-        class="flex items-center p-1 text-brand-too-blue hover:text-brand-too-blue-dark focus:outline-none focus:shadow-outline transform duration-100 hover:scale-105 duration-300 ease-in-out">
-        <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
+      <div class="flex justify-center">
+        <div x-data="{
+                  open: false,
+                  toggle() {
+                      if (this.open) {
+                          return this.close()
+                      }
+
+                      this.$refs.button.focus()
+
+                      this.open = true
+                  },
+                  close(focusAfter) {
+                      if (! this.open) return
+
+                      this.open = false
+
+                      focusAfter && focusAfter.focus()
+                  }
+              }" x-on:keydown.escape.prevent.stop="close($refs.button)"
+          x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']" class="relative">
+          <!-- Button -->
+          <button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')"
+            type="button" class="px-5 py-2.5">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+
+          <!-- Panel -->
+          <div x-ref="panel" x-show="open" x-transition.origin.top.right x-transition.enter.duration.700ms x-transition.leave.duration.300ms x-on:click.outside="close($refs.button)"
+            :id="$id('dropdown-button')" style="display: none;"
+            class="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-md overflow-hidden border-gray-200">
+            <div>
+              <a href="/about" class="block w-full px-4 py-2 text-left text-2xl hover:bg-brand-too-blue hover:bg-opacity-10 hover:text-brand-too-blue">
+                About
+              </a>
+
+              <a href="/services" class="block w-full px-4 py-2 text-left text-2xl hover:bg-brand-too-blue hover:bg-opacity-10 hover:text-brand-too-blue">
+                Services
+              </a>
+
+              <a href="/work" class="block w-full px-4 py-2 text-left text-2xl hover:bg-brand-too-blue hover:bg-opacity-10 hover:text-brand-too-blue">
+                Work
+              </a>
+
+              <a href="mailto:andrew@fourfront.com?subject=Saying Hello" disabled class="block w-full px-4 py-2 text-left text-2xl hover:bg-brand-too-blue hover:bg-opacity-10 hover:text-brand-too-blue">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div
       class="w-full flex-grow md:flex md:items-center md:w-auto hidden mt-2 md:mt-0 md:bg-transparent text-black p-4 md:p-0 z-20"
@@ -36,24 +83,5 @@
         </li>
       </ul>
     </div>
-  </div>
-</nav>
-
-<nav id="mobile-nav" class="h-screen">
-  <div class="text-right bg-brand-creme">
-    <button class="nav-close my-4 mr-4" data-action="click->nav#close">
-      <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-        <path
-          d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" />
-      </svg>
-    </button>
-  </div>
-  <div class="flex flex-col bg-white h-full">
-    <a class="inline-block no-underline hover:underline text-lg text-gray-800 hover:text-teal-800 py-4 px-6 mx-2 border-b border-gray-300"
-      href="/about" data-action="click->nav#close">About</a>
-    <a class="inline-block no-underline hover:underline text-lg text-gray-800 hover:text-teal-800 py-4 px-6 mx-2 border-b border-gray-300"
-      href="/service" data-action="click->nav#close">Services</a>
-    <a class="inline-block no-underline hover:underline text-lg text-gray-800 hover:text-teal-800 py-4 px-6 mx-2 border-b border-gray-300"
-      href="/work">Work</a>
   </div>
 </nav>
