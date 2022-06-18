@@ -1,0 +1,41 @@
+---
+layout: default
+title: "FourFront — Work"
+---
+
+
+<div class="pt-[100px] sm:pt-[160px]">
+
+  <section class="container mx-auto flex flex-col justify-center gap-y-8 max-w-5xl px-12 sm:px-0">
+    <h2 class="font-bookmania text-5xl text-brand-golden text-center">Synopsis?<br>
+      We exist because there is no substitute for a well-developed creative solution.</h2>
+  </section>
+
+
+
+  <section class="container mx-auto flex flex-col gap-y-16 max-w-5xl px-12 sm:px-0">
+    <h3 class="text-brand-too-blue text-7xl font-bold mt-16">Case Studies</h3>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-8">
+      {% for post in site.posts %}
+      <div
+        class="{{ post.column_span }} {{ post.height }} {{ post.shape }} relative overflow-hidden group">
+        <div class="absolute inset-0 opacity-1 group-hover:opacity-0 transition duration-500">
+          <img class="w-full h-full object-cover" src="{{ post.image }}" alt="">
+          <div class="absolute inset-0 bg-brand-turquoise-80 mix-blend-multiply" aria-hidden="true"></div>
+        </div>
+        <div
+          class="opacity-0 group-hover:opacity-100 flex flex-col bg-brand-too-blue w-full h-full justify-end transition duration-500">
+          <div class="p-20 text-white">
+            <h3 class="font-bookmania-black text-3xl -mb-2 tracking-wider">{{ post.title }}</h3>
+            <p class="brand-h3 text-lg text-brand-periwinkle tracking-widest">{{ post.subtitle }}</p>
+            <div class="w-1/4 my-2 border-2 border-brand-golden"></div>
+            <p>{{ post.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor%}
+    </div>
+  </section>
+
+</div>

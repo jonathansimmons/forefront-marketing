@@ -1,0 +1,22 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+{% include head.html %}
+
+<body class="leading-normal tracking-normal bg-brand-creme font-degular overflow-x-hidden flex flex-col min-h-full"
+  data-controller="nav">
+
+  {% include header.html %}
+
+  <div class="flex-grow pt-[100px] sm:pt-[200px]">
+    {{ content }}
+  </div>
+
+  {% include footer.html %}
+  {% if jekyll.environment == "production" %}
+  {% include scripts.html %}
+  {% endif %}
+</body>
+
+</html>
