@@ -41,11 +41,11 @@ export default class extends Controller {
 
   setupHeader(){
     if (window.innerWidth <= 480 || window.scrollY > 10) {
-      this.headerTarget.classList.remove("h-40")
-      this.headerTarget.classList.add("h-16")
+      this.headerTarget.classList.remove("sm:h-40")
+      this.headerTarget.classList.add("sm:h-16")
     } else {
-      this.headerTarget.classList.remove("h-16")
-      this.headerTarget.classList.add("h-40")
+      this.headerTarget.classList.remove("sm:h-16")
+      this.headerTarget.classList.add("sm:h-40")
     }
   }
 

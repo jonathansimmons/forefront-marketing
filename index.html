@@ -7,15 +7,15 @@ image: /assets/images/hero.png
 
 
 <div class="pt-[100px] sm:pt-[220px]">
-  <div class="flex flex-col container mx-auto my-12 md:my-24 justify-center relative max-w-7xl px-8 sm:px-0">
-    <div class="max-w-4xl z-20 relative">
+  <div class="flex flex-col container mx-auto my-12 md:my-24 justify-center relative max-w-7xl px-8 lg:px-0"  x-data="{ shown: false }" x-intersect="shown = true">
+    <div class="max-w-4xl z-20 relative" x-show="shown" x-transition:enter="animate__animated animate__fadeInLeft">
       <h1 class="text-4xl md:text-7xl brand-h1 mb-2">
         <span class="text-brand-too-blue">We work with organizations who want to take their story</span>
         <span class="text-brand-golden">into uncharted territiory.</span>
       </h1>
       <p class="font-bookmania text-brand-periwinkle text-lg md:text-2xl">From creative production to operational consultation,<br class="hidden sm:block"> we help you go where you've never gone before</p>
     </div>
-    <div class="hidden md:block h-[600px] rounded-bl-[8rem] rounded-tr-[8rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise absolute top-0 w-1/2 right-0 z-10 overflow-hidden transform -translate-y-1/4">
+    <div class="hidden md:block h-[600px] rounded-bl-[8rem] rounded-tr-[8rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise absolute top-0 w-1/2 right-0 z-10 overflow-hidden transform -translate-y-1/4" x-show="shown" x-transition:enter="animate__animated animate__fadeIn">
       <div class="absolute inset-0">
         <img class="w-full h-full object-cover"
           src="/assets/images/hero.png"
@@ -36,27 +36,27 @@ image: /assets/images/hero.png
     </div>
   </div>
 
-  <div class="bg-brand-too-blue text-white  px-8 sm:px-0">
+  <div class="bg-brand-too-blue text-white  px-8 lg:px-0">
     <div class="container mx-auto py-12 md:py-40 max-w-7xl">
       <div class="grid grid-cols-1 lg:grid-cols-7 gap-y-8 lg:gap-y-0">
-        <div class="col-span-4">
+        <div class="col-span-4" x-data="{ shown: false }" x-intersect="shown = true">
           <div class="w-10/12">
-            <h3 class="text-4xl md:text-6xl brand-h3 mb-4 font-medium">We exist because there is no substitute for a <span class="whitespace-nowrap">well-developed</span> creative solution.</h3>
-            <p class="text-lg md:text-2xl">Like experienced wizards who aid ring-bearers to fiery mountains, we wait for those who feel the call down the road less traveled. Our work is the creative journey, and we navigate it with honesty, innovation, quality, and measurability, helping others tell their stories both in new ways and for the very first time.</p>
+            <h3 class="text-4xl md:text-6xl brand-h3 mb-4 font-medium" x-show="shown" x-transition:enter="animate__animated animate__fadeInLeft">We exist because there is no substitute for a <span class="whitespace-nowrap">well-developed</span> creative solution.</h3>
+            <p class="text-lg md:text-2xl" x-show="shown" x-transition:enter="animate__animated animate__fadeInLeft">Like experienced wizards who aid ring-bearers to fiery mountains, we wait for those who feel the call down the road less traveled. Our work is the creative journey, and we navigate it with honesty, innovation, quality, and measurability, helping others tell their stories both in new ways and for the very first time.</p>
           </div>
         </div>
-        <div class="flex col-span-3 gap-x-8">
-          <div class="h-40 w-40 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden hidden md:block">
-            <img src="https://placeimg.com/200/200/tech">
+        <div class="flex col-span-3 gap-x-8" x-data="{ shown: false }" x-intersect="shown = true">
+          <div class="h-40 w-40 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden hidden md:block" x-show="shown" x-transition:enter="animate__animated animate__fadeInDown">
+          <img src="https://placeimg.com/200/200/tech">
           </div>
-          <div class="h-full w-40 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden  hidden md:block">
+          <div class="h-full w-40 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden  hidden md:block" x-show="shown" x-transition:enter="animate__animated animate__fadeInUp">
             <img src="https://placeimg.com/200/500/tech">
           </div>
-          <div class="flex flex-col gap-y-8">
-            <div class="h-40 w-60 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden">
+          <div class="flex flex-col gap-y-8" x-data="{ shown: false }" x-intersect="shown = true">
+            <div class="h-40 w-60 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden" x-show="shown" x-transition:enter="animate__animated animate__fadeInRight">
               <img src="https://placeimg.com/300/200/tech">
             </div>
-            <div class="h-40 w-40 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden">
+            <div class="h-40 w-40 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden" x-show="shown" x-transition:enter="animate__animated animate__fadeInUp">
               <img src="https://placeimg.com/200/200/tech">
             </div>
           </div>

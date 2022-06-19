@@ -2732,6 +2732,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }
 
+  .sm\:h-40 {
+    height: 10rem;
+  }
+
+  .sm\:h-16 {
+    height: 4rem;
+  }
+
   .sm\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -2962,6 +2970,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:text-6xl {
