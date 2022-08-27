@@ -1,3 +1,3 @@
 # fourfront-marketing
 
-Customer-facing Marketing Site for FourFront
+Customer-facing Marketing Site for Fourfront
