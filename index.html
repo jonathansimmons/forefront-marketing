@@ -7,7 +7,7 @@ image: /assets/images/hero.png
 
 
 <div class="pt-[100px] sm:pt-[220px]">
-  <div class="flex flex-col container mx-auto my-12 md:my-24 justify-center relative max-w-7xl px-8 lg:px-0"  x-data="{ shown: false }" x-intersect="shown = true">
+  <div class="flex flex-col container mx-auto my-12 justify-center relative max-w-7xl px-8 lg:px-0"  x-data="{ shown: false }" x-intersect="shown = true">
     <div class="max-w-4xl z-20 relative" x-show="shown" x-transition:enter="animate__animated animate__fadeInLeft">
       <h1 class="text-4xl md:text-7xl brand-h1 mb-2">
         <span class="text-brand-too-blue">We work with organizations who want to take their story</span>
@@ -19,7 +19,7 @@ image: /assets/images/hero.png
     </div>
   </div>
 
-  <div class="flex flex-col container mx-auto mt-16 sm:mt-60 mb-28 justify-center relative">
+  <div class="hidden flex flex-col container mx-auto mt-16 sm:mt-60 mb-28 justify-center relative">
     <div class="m-8 bg-brand-too-blue h-60 w-full md:h-[600px] md:w-3/4 mx-auto rounded-bl-[8rem] rounded-tr-2xl rounded-br-2xl rounded-tl-2xl flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-28 w-28 text-white stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor"
         stroke-width="2">
@@ -42,21 +42,10 @@ image: /assets/images/hero.png
             helping organizations connect their vision to inspired, impactful deliverables.</p>
           </div>
         </div>
-        <div class="flex col-span-3 gap-x-8" x-data="{ shown: false }" x-intersect="shown = true">
-          <div class="h-40 w-40 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden hidden md:block" x-show="shown" x-transition:enter="animate__animated animate__fadeInDown">
-          <img src="https://placeimg.com/200/200/tech">
-          </div>
-          <div class="h-full w-40 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden  hidden md:block" x-show="shown" x-transition:enter="animate__animated animate__fadeInUp">
-            <img src="https://placeimg.com/200/500/tech">
-          </div>
-          <div class="flex flex-col gap-y-8" x-data="{ shown: false }" x-intersect="shown = true">
-            <div class="h-40 w-60 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden" x-show="shown" x-transition:enter="animate__animated animate__fadeInRight">
-              <img src="https://placeimg.com/300/200/tech">
-            </div>
-            <div class="h-40 w-40 rounded-bl-[4rem] rounded-tr-[4rem] rounded-br-2xl rounded-tl-2xl bg-brand-turquoise w-2/5 right-0 z-10 overflow-hidden" x-show="shown" x-transition:enter="animate__animated animate__fadeInUp">
-              <img src="https://placeimg.com/200/200/tech">
-            </div>
-          </div>
+        <div class="col-span-3">
+          <img class="w-full "
+            src="/assets/images/we-exist.png"
+            alt="We Exist">
         </div>
       </div>
     </div>
@@ -67,7 +56,7 @@ image: /assets/images/hero.png
     <div class="relative pb-28 bg-brand-turquoise">
       <div class="absolute inset-0">
         <img class="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&"
+          src="/assets/images/services.jpg"
           alt="">
         <div class="absolute inset-0 bg-brand-turquoise-80 mix-blend-multiply" aria-hidden="true"></div>
       </div>
@@ -77,18 +66,13 @@ image: /assets/images/hero.png
     </div>
 
     <section class="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
-      <h2 class="sr-only" id="contact-heading">Contact us</h2>
+      <h2 class="sr-only" id="contact-heading">Services</h2>
       <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-20">
         <div class="flex flex-col bg-white rounded-xl shadow-xl relative">
           <div class="flex flex-col relative py-6 px-6 md:px-8 md:py-8 text-brand-too-blue gap-y-4 md:gap-y-8">
             <div class=" bg-brand-golden rounded-xl shadow-lg rounded-bl-2xl rounded-tr-2xl rounded-br rounded-tl-[4px] h-16 w-16 absolute md:-top-8 md:-left-8 -right-2 -top-2"></div>
             <h3 class="text-2xl md:text-4xl font-bookmania  mt-2">Create and Produce</h3>
             <p class="text-xl">We make stuff that feels like it came from an in-house team, and we work very hard to make it the very best it can be. Film, animation, environmental and experiential, interactive, brand and campaign development, formatted however we dream it up. The sky is the limit.</p>
-            <div class="realtive">
-              <a href="#"
-                class="text-base font-medium text-brand-golden tracking-widest absolute bottom-8 right-8 block">Capabilities<span
-                  aria-hidden="true"> &rarr;</span></a>
-            </div>
           </div>
         </div>
 
@@ -99,10 +83,6 @@ image: /assets/images/hero.png
             <p class="text-xl">We help organizations encourage creative thinking and maximize budget, with consultation shaped for their team and
             context. Whether it’s outsource preparation, creative direction for-hire, or workflow optimization, we help you achieve
             your creative goals and ward off burnout.</p>
-            <div class="realtive">
-              <a href="#" class="text-base font-medium text-brand-golden tracking-widest absolute bottom-8 right-8 block">Capabilities<span
-                aria-hidden="true"> &rarr;</span></a>
-            </div>
           </div>
         </div>
       </div>
@@ -114,55 +94,54 @@ image: /assets/images/hero.png
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-8">
         <div class="col-span-1 h-[300px] lg:h-[600px] rounded-bl-[8rem] rounded-tr-[8rem] rounded-br-2xl rounded-tl-2xl relative overflow-hidden group">
-          <div class="absolute inset-0 opacity-1 group-hover:opacity-0 transition duration-500">
-            <img class="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&"
-              alt="">
-            <div class="absolute inset-0 bg-brand-turquoise-80 mix-blend-multiply" aria-hidden="true"></div>
-          </div>
-          <div class="opacity-0 group-hover:opacity-100 flex flex-col bg-brand-too-blue w-full h-full justify-end transition duration-500">
-            <div class="p-20 text-white">
-              <h3 class="font-bookmania-black text-3xl -mb-2 tracking-wider">Some Card Title</h3>
-              <p class="brand-h3 text-lg text-brand-periwinkle tracking-widest">This is a small subtag text</p>
-              <div class="w-1/4 my-2 border-2 border-brand-golden"></div>
-              <p>This is a bit of descriptive text that is way better than lorem ipsum. Trust me, I've used a lot of lorem in my time.</p>
+          <a href="/2022/06/18/taras-story.html">
+            <div class="absolute inset-0 opacity-1 group-hover:opacity-0 transition duration-500">
+              <img class="w-full h-full object-cover object-right"
+                src="/assets/images/posts/taras-story/header.png"
+                alt="">
+              <div class="absolute inset-0 bg-brand-turquoise-80 mix-blend-multiply" aria-hidden="true"></div>
             </div>
-          </div>
+            <div class="opacity-0 md:group-hover:opacity-100 flex flex-col bg-brand-too-blue w-full h-full justify-end transition duration-500">
+              <div class="p-20 text-white">
+                <h3 class="font-bookmania-black text-3xl -mb-2 tracking-wider">Tara's Story</h3>
+                <p class="brand-h3 text-lg text-brand-periwinkle tracking-widest">Mountain Springs Church — 2022</p>
+              </div>
+            </div>
+          </a>
         </div>
         <div class="col-span-1 h-[300px] lg:h-[600px] rounded-bl-[8rem] rounded-tr-[8rem] rounded-br-2xl rounded-tl-2xl relative overflow-hidden group">
-          <div class="absolute inset-0 opacity-1 group-hover:opacity-0 transition duration-500">
-            <img class="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&"
-              alt="">
-            <div class="absolute inset-0 bg-brand-turquoise-80 mix-blend-multiply" aria-hidden="true"></div>
-          </div>
-          <div
-            class="opacity-0 group-hover:opacity-100 flex flex-col bg-brand-too-blue w-full h-full justify-end transition duration-500">
-            <div class="p-20 text-white">
-              <h3 class="font-bookmania-black text-3xl -mb-2 tracking-wider">Some Card Title</h3>
-              <p class="brand-h3 text-lg text-brand-periwinkle tracking-widest">This is a small subtag text</p>
-              <div class="w-1/4 my-2 border-2 border-brand-golden"></div>
-              <p>This is a bit of descriptive text that is way better than lorem ipsum. Trust me, I've used a lot of lorem in my
-                time.</p>
+          <a href="/2022/06/18/arc-conference.html">
+            <div class="absolute inset-0 opacity-1 md:group-hover:opacity-0 transition duration-500">
+              <img class="w-full h-full object-cover"
+                src="/assets/images/posts/arc-conference/header.jpg"
+                alt="">
+              <div class="absolute inset-0 bg-brand-turquoise-80 mix-blend-multiply" aria-hidden="true"></div>
             </div>
-          </div>
+            <div
+              class="opacity-0 group-hover:opacity-100 flex flex-col bg-brand-too-blue w-full h-full justify-end transition duration-500">
+              <div class="p-20 text-white">
+                <h3 class="font-bookmania-black text-3xl -mb-2 tracking-wider">ARC Conferences</h3>
+                <p class="brand-h3 text-lg text-brand-periwinkle tracking-widest"> Association of Related Churches — 2019-2022</p>
+              </div>
+            </div>
+          </a>
         </div>
         <div class="col-span-1 h-[300px] lg:h-[600px] rounded-bl-[8rem] rounded-tr-[8rem] rounded-br-2xl rounded-tl-2xl relative overflow-hidden group">
-          <div class="absolute inset-0 opacity-1 group-hover:opacity-0 transition duration-500">
-            <img class="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1551302175-952301267d19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&"
-              alt="">
-            <div class="absolute inset-0 bg-brand-turquoise-80 mix-blend-multiply" aria-hidden="true"></div>
-          </div>
-          <div
-            class="opacity-0 group-hover:opacity-100 flex flex-col bg-brand-too-blue w-full h-full justify-end transition duration-500">
-            <div class="p-20 text-white">
-              <h3 class="font-bookmania-black text-3xl -mb-2 tracking-wider">Some Card Title</h3>
-              <p class="brand-h3 text-lg text-brand-periwinkle tracking-widest">This is a small subtag text</p>
-              <div class="w-1/4 my-2 border-2 border-brand-golden"></div>
-              <p>This is a bit of descriptive text that is way better than lorem ipsum. Trust me, I've used a lot of lorem in my time.</p>
+          <a href="/2022/06/18/adeption.html">
+            <div class="absolute inset-0 opacity-1 md:group-hover:opacity-0 transition duration-500 bg-white">
+              <img class="w-full h-full object-contain "
+                src="/assets/images/posts/adeption/homepage-icon.png"
+                alt="">
+              <div class="absolute inset-0 bg-brand-turquoise-80 mix-blend-multiply" aria-hidden="true"></div>
             </div>
-          </div>
+            <div
+              class="opacity-0 group-hover:opacity-100 flex flex-col bg-brand-too-blue w-full h-full justify-end transition duration-500">
+              <div class="p-20 text-white">
+                <h3 class="font-bookmania-black text-3xl -mb-2 tracking-wider">Medtronic & Walmart Content | Adeption</h3>
+                <p class="brand-h3 text-lg text-brand-periwinkle tracking-widest">Mill Valley, CA - 2021</p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
