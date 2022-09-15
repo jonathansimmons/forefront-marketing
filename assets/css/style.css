@@ -827,6 +827,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[calc\(100\%-theme\(\"spacing\.1\"\)\)\] {
   height: calc(100% - 0.25rem);
 }
+.h-\[200px\] {
+  height: 200px;
+}
+.h-\[175px\] {
+  height: 175px;
+}
 .min-h-full {
   min-height: 100%;
 }
