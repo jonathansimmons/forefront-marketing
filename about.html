@@ -68,94 +68,7 @@ title: "Fourfront — About"
     <h2 class="font-bold  text-5xl md:text-7xl text-brand-too-blue">The Four Elements<br> Of Creativity</h2>
   </section>
 
-  <div x-data="{
-          selectedId: null,
-          init() {
-              // Set the first available tab on the page on page load.
-              this.$nextTick(() => this.select(this.$id('tab', 1)))
-          },
-          select(id) {
-              this.selectedId = id
-          },
-          isSelected(id) {
-              return this.selectedId === id
-          },
-          whichChild(el, parent) {
-              return Array.from(parent.children).indexOf(el) + 1
-          }
-      }" x-id="['tab']" class="container mx-auto max-w-5xl hidden  grid-cols-5 gap-x-8 px-8 lg:px-0 ">
-
-    <ul x-ref="tablist" @keydown.right.prevent.stop="$focus.wrap().next()" @keydown.home.prevent.stop="$focus.first()"
-      @keydown.page-up.prevent.stop="$focus.first()" @keydown.left.prevent.stop="$focus.wrap().prev()"
-      @keydown.end.prevent.stop="$focus.last()" @keydown.page-down.prevent.stop="$focus.last()" role="tablist"
-      class="col-span-1 flex flex-col gap-y-6">
-      <!-- Tab -->
-      <li>
-        <button :id="$id('tab', whichChild($el.parentElement, $refs.tablist))" @click="select($el.id)" @mousedown.prevent
-          @focus="select($el.id)" type="button" :tabindex="isSelected($el.id) ? 0 : -1"
-          :aria-selected="isSelected($el.id)"
-          :class="isSelected($el.id) ? 'after:bg-brand-golden' : 'after:bg-transparent'"
-          class="text-white text-xl px-4 py-2 rounded-md bg-brand-golden w-full text-left relative after:block after:absolute after:right-2 after:h-1 after:w-8 after:z-20  after:transform after:-translate-y-4 after:translate-x-8" role="tab">Honesty</button>
-      </li>
-
-      <li>
-        <button :id="$id('tab', whichChild($el.parentElement, $refs.tablist))" @click="select($el.id)" @mousedown.prevent
-          @focus="select($el.id)" type="button" :tabindex="isSelected($el.id) ? 0 : -1"
-          :aria-selected="isSelected($el.id)"
-          :class="isSelected($el.id) ? 'after:bg-brand-periwinkle' : 'after:bg-transparent'"
-          class="text-white text-xl px-4 py-2 rounded-md bg-brand-periwinkle w-full text-left relative after:block after:absolute after:right-2 after:h-1 after:w-8 after:z-20  after:transform after:-translate-y-4 after:translate-x-8" role="tab">Innovation</button>
-      </li>
-      <li>
-        <button :id="$id('tab', whichChild($el.parentElement, $refs.tablist))" @click="select($el.id)" @mousedown.prevent
-          @focus="select($el.id)" type="button" :tabindex="isSelected($el.id) ? 0 : -1"
-          :aria-selected="isSelected($el.id)"
-          :class="isSelected($el.id) ? 'after:bg-brand-coral' : 'after:bg-transparent'"
-          class="text-white text-xl px-4 py-2 rounded-md bg-brand-coral w-full text-left relative after:block after:absolute after:right-2 after:h-1 after:w-8 after:z-20  after:transform after:-translate-y-4 after:translate-x-8" role="tab">Quailty</button>
-      </li>
-      <li>
-        <button :id="$id('tab', whichChild($el.parentElement, $refs.tablist))" @click="select($el.id)" @mousedown.prevent
-          @focus="select($el.id)" type="button" :tabindex="isSelected($el.id) ? 0 : -1"
-          :aria-selected="isSelected($el.id)"
-          :class="isSelected($el.id) ? 'after:bg-brand-turquoise' : 'after:bg-transparent'"
-          class="text-white text-xl px-4 py-2 rounded-md bg-brand-turquoise w-full text-left relative after:block after:absolute after:right-2 after:h-1 after:w-8 after:z-20  after:transform after:-translate-y-4 after:translate-x-8" role="tab">Measurability</button>
-      </li>
-    </ul>
-
-    <div role="tabpanels" class="col-span-4">
-      <!-- Panel -->
-      <section x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
-               :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))" role="tabpanel"
-               :class="isSelected($id('tab', whichChild($el, $el.parentElement))) ? 'animate__animated animate__fadeIn' : ''"
-               class="p-8">
-        <p class="text-brand-golden text-2xl">A tailor doesn't let you walk out the door in clothes that don't help you look your absolute best; everything has to fit. If a deliverable doesn't look and sound like you, then it won't have the correct impact. By getting to know you and
-        your organization, we begin to learn more about your identity, and ensure our work reflects who you are.</p>
-      </section>
-
-      <section x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
-               :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))" role="tabpanel"
-               :class="isSelected($id('tab', whichChild($el, $el.parentElement))) ? 'animate__animated animate__fadeIn' : ''"
-               class="p-8">
-        <p class="text-brand-periwinkle text-2xl">People crave the new, and they can't help but appreciate a fresh take on something familiar. We are constantly seeking out the most recent tools and practices, but more importantly, we approach every project with the idea: "there is no box." We approach each project from a starting place of boundless potential, and work from there.</p>
-      </section>
-
-      <section x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
-        :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))" role="tabpanel"
-        :class="isSelected($id('tab', whichChild($el, $el.parentElement))) ? 'animate__animated animate__fadeIn' : ''"
-        class="p-8">
-        <p class="text-brand-coral text-2xl">CCreativity is a sequence of decisions, with each choice a single note in a symphony. By pursuing excellence in service of strategic vision, those choices create a seamless whole for the audience. We constantly hone our craft as artisans and experts to ensure that each decision we make is the best in service of the whole.</p>
-      </section>
-
-      <section x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
-        :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))" role="tabpanel"
-        :class="isSelected($id('tab', whichChild($el, $el.parentElement))) ? 'animate__animated animate__fadeIn' : ''"
-          class="p-8">
-        <p class="text-brand-turquoise text-2xl">Art for art's sake is a beautiful thing, but fourfront doesn't exist to seek patrons. Creative production risks being wasted unless it is directed, targeted, and built with measurable goals as part of the product from the first step.
-        Those goals may be specific, or they may be ephemeral, but they must be established.</p>
-      </section>
-    </div>
-  </div>
-
-  <div x-data="{ active: 1 }" class="max-w-5xl mx-auto space-y-4  px-8">
+  <div x-data="{ active: 1 }" class="max-w-5xl mx-auto space-y-4 px-8">
     <div x-data="{
           id: 1,
           get expanded() {
@@ -177,7 +90,8 @@ title: "Fourfront — About"
       </h2>
 
       <div x-show="expanded" x-collapse>
-        <div class="pb-4 px-6 text-brand-golden mt-4 text-xl">If A deliverable doesn't look and sound like you, then it won't have the correct impact. A tailor doesn't let you walk out the door in clothes that don't help you look your absolute best; everything has to fit. By getting to know you and your organization, we begin to learn more about your identity, and ensure our work reflects who you are.</div>
+        <div class="pb-4 px-6 text-brand-golden mt-4 text-xl">A tailor doesn't let you walk out the door in clothes that don't help you look your absolute best; everything has to fit. If a deliverable doesn't look and sound like you, then it won't have the correct impact. By getting to know you and
+        your organization, we begin to learn more about your identity, and ensure our work reflects who you are.</div>
       </div>
     </div>
     <div x-data="{
